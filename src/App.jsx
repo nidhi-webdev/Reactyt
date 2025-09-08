@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  return <h1> Learing React </h1>
+  const name = "Nidhi"
+  return <h1> I am {name} </h1>
 }
 
 export default App
