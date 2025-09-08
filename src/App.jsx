@@ -1,17 +1,14 @@
+import React from 'react'
+import './style.css'
 
-import { useState } from 'react'
-import './App.css'
 
 const App = () => {
-const [num, setNum] = useState(0)
-
-
   return (
-<div>
-  <h1> Number is {num} </h1>
-<button onClick={() => setNum(num + 10)}> Increment </button>
-<button onClick={() => setNum(num - 10)}> Decrement </button>
-</div>
+    <div>
+      <h1 className='text-5xl bg-pink-700 text-black'>
+        My name is Nidhi 
+      </h1>
+    </div>
   )
 }
 
