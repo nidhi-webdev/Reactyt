@@ -1,18 +1,13 @@
-import React, { useState } from 'react'
-import './style.css'
+import React from 'react'
+
+import Card from './components/Card'
 
 
 const App = () => {
 
- 
+
   return (
-    <>
-    <h1>Hello   </h1>
-     <h1>Hello2  </h1>
-      <h1>Hello3  </h1>
-  
-      
-    </>
+   <Card user="Nidhitest" age='30' city="Berlin" />
   )
 }
 
