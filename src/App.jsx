@@ -3,11 +3,19 @@ import './style.css'
 
 
 const App = () => {
+ const submitHandler = (e) => {
+  e.preventDefault()
+  console.log("hello")
+ }
+
   return (
     <div>
-      <h1 className='text-5xl bg-pink-700 text-black'>
-        My name is Nidhi 
-      </h1>
+    <form onSubmit={(e) => {
+      submitHandler(e)
+    }}>
+      <input type='text' placeholder='write something' className='px-4 py-4 border border-black m-4'/>
+      <button className='bg-emerald-300'> submit </button>
+    </form>
     </div>
   )
 }
