@@ -5,7 +5,12 @@ import './App.css'
 
 function App() {
   const name = "Nidhi"
-  return <h1> I am {name} </h1>
+  const functionCall = () => {
+    console.log("hello")
+  }
+  return <div> I am {name} 
+       <button onClick={functionCall}> Click me </button>
+  </div>
 }
 
 export default App
