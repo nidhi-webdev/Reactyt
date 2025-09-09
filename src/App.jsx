@@ -45,14 +45,14 @@ const App = () => {
   return (
     <div className='p-10'>
       {users.map(function (ele, idx) {
-       return <Card 
-       key = {idx}
-       name={ele.name} 
-       age={ele.age} 
-       city={ele.city} 
-       profession= {ele.profession}
-       photo = {ele.image}
-       />
+        return <Card
+          key={idx}
+          name={ele.name}
+          age={ele.age}
+          city={ele.city}
+          profession={ele.profession}
+          photo={ele.image}
+        />
       })}
     </div>
   )
