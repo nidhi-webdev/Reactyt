@@ -11,14 +11,18 @@ const App = () => {
     setData(res.data)
   }
 
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <>
       {/* <Card name="Nidhi" /> */}
       <div className='p-10'>
-        <button onClick={getData}
+        {/* <button onClick={getData}
           className='bg-teal-700 text-white rounded py-6 px-10 active:scale-90 cursor-pointer'>
           Get data
-        </button>
+        </button> */}
         <div className='p-5 mt-5 bg-gray-950'>
           {data.map(function (ele, idx) {
             return <div key={idx} className='bg-gray-50 text-black flex items-center justify-between w-full px-7 py-6 rounded-2xl m-2'>
