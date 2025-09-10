@@ -1,23 +1,20 @@
-import { Route, Routes } from "react-router-dom"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
-import Home from "./pages/Home"
-import Header from "./components/Header"
-
-
+import Header from './components/Header'
+import Footer from './components/Footer'
+import { DataContext } from './Context/userContext'
+import { useContext } from 'react'
 
 const App = () => {
-
+ const data = useContext(DataContext)
+ 
   return (
     <div>
+     <h1> This is App {data} </h1> 
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Footer />
     </div>
   )
 }
 
 export default App
+
+// Followed This Video https://www.youtube.com/watch?v=E6tAtRi82QY
