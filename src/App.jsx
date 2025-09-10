@@ -5,10 +5,10 @@ import { useContext } from 'react'
 
 const App = () => {
  const data = useContext(DataContext)
- 
+ console.log(data)
   return (
     <div>
-     <h1> This is App {data} </h1> 
+     <h1> This is App {data.name} </h1> 
       <Header />
       <Footer />
     </div>

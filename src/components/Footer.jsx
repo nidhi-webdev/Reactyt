@@ -8,7 +8,7 @@ const Footer = () => {
     const data = useContext(DataContext)
 
         return (
-           <h1> Footer {data} </h1>     
+           <h1> Footer {data.age} </h1>     
 
         )
 }

@@ -6,7 +6,7 @@ const Header = () => {
 const data = useContext(DataContext)
         return (
 
-                <h1>Header {data} </h1>
+                <h1>Header {data.Occupation} </h1>
         )
 }
 
