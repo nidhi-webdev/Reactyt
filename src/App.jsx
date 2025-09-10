@@ -1,33 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import Card from './components/Card1'
-import axios from 'axios'
+import { Route, Routes } from "react-router-dom"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import Home from "./pages/Home"
+
 
 
 const App = () => {
-  const [data, setData] = useState([])
-
-  const getData = async () => {
-    const res = await axios.get("https://picsum.photos/v2/list?page=2&limit=30")
-    setData(res.data)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
-
+ 
   return (
-    <>
-      <div className='p-10'>
-        <div className='p-5 mt-5 bg-gray-950'>
-          {data.map(function (ele, idx) {
-            return <div key={idx} className='bg-gray-50 text-black flex items-center justify-between w-full px-7 py-6 rounded-2xl m-2'>
-              <img className='h-80' src={ele.download_url} />
-              <h1> {ele.author}</h1>
-            </div>
-          })}
-        </div>
-      </div>
-    </>
+    <div>
+     <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+     </Routes>
+    </div>
   )
 }
 
